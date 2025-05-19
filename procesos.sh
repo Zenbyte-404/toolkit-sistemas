@@ -14,7 +14,9 @@ while true; do
 
     case $opcion in
         1)
-            bash procesos.sh
+            echo "Procesos en ejecución:"
+            ps aux | less
+            read -p "Presione Enter para continuar..."
             ;;
         0)
             echo "Saliendo del toolkit. ¡Hasta luego!"
