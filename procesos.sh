@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# main_toolkit.sh - Seccion 5: Menú principal del toolkit de administración
+# main_toolkit.sh - Seccion: Menú principal del toolkit de administración
 
 while true; do
     clear
@@ -22,6 +22,20 @@ while true; do
             read -p "Ingrese el PID del proceso: " pid
             if ps -p "$pid" > /dev/null 2>&1; then
                 ps -p "$pid" -o pid,ppid,user,%cpu,%mem,etime,cmd
+            else
+                echo "PID no válido o proceso inexistente."
+            fi
+            read -p "Presione Enter para continuar..."
+            ;;
+        3)
+            read -p "Ingrese el PID del proceso a finalizar: " pid
+            if ps -p "$pid" > /dev/null 2>&1; then
+                read -p "¿Está seguro de enviar SIGTERM al proceso $pid? (s/n): " confirmacion
+                if [[ "$confirmacion" == "s" || "$confirmacion" == "S" ]]; then
+                    kill -15 "$pid" && echo "Señal enviada exitosamente." || echo "Error al enviar la señal."
+                else
+                    echo "Acción cancelada."
+                fi
             else
                 echo "PID no válido o proceso inexistente."
             fi
