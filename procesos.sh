@@ -18,6 +18,15 @@ while true; do
             ps aux | less
             read -p "Presione Enter para continuar..."
             ;;
+        2)
+            read -p "Ingrese el PID del proceso: " pid
+            if ps -p "$pid" > /dev/null 2>&1; then
+                ps -p "$pid" -o pid,ppid,user,%cpu,%mem,etime,cmd
+            else
+                echo "PID no válido o proceso inexistente."
+            fi
+            read -p "Presione Enter para continuar..."
+            ;;
         0)
             echo "Saliendo del toolkit. ¡Hasta luego!"
             exit 0
