@@ -1,0 +1,12 @@
+2025-05-18 19:18:34.672 [info] 
+
+
+
+
+2025-05-18 19:18:34.688 [info] Extension host agent started.
+2025-05-18 19:18:34.708 [info] Started initializing default profile extensions in extensions installation folder. file:///home/nico_menon_2/.codeoss/extensions
+2025-05-18 19:18:34.721 [info] Completed initializing default profile extensions in extensions installation folder. file:///home/nico_menon_2/.codeoss/extensions
+2025-05-18 19:18:50.444 [info] [127.0.0.1][9a82ec7d][ManagementConnection] New connection established.
+2025-05-18 19:18:50.495 [info] [127.0.0.1][ea97b6ae][ExtensionHostConnection] New connection established.
+2025-05-18 19:18:52.180 [info] [127.0.0.1][ea97b6ae][ExtensionHostConnection] <1264> Launched Extension Host Process.
+2025-05-18 19:20:09.498 [info] [127.0.0.1][9a82ec7d][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
