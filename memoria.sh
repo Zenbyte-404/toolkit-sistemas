@@ -23,6 +23,11 @@ while true; do
             head -n 10 /proc/meminfo
             read -p "Presione Enter para continuar..."
             ;;
+        3)
+            echo ""
+            vmstat 1 5
+            read -p "Presione Enter para continuar..."
+            ;;
         0) break ;;
     esac
 done
