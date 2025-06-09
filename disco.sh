@@ -13,6 +13,15 @@ while true; do
     read -p "Seleccione una opción: " opcion
 
     case $opcion in
+        3)
+            read -p "Ingrese el directorio a listar: " dir
+            if [ -d "$dir" ]; then
+                ls -l "$dir"
+            else
+                echo "Directorio inválido o inexistente."
+            fi
+            read -p "Presione Enter para continuar..."
+            ;;
         0) break ;;
     esac
 done
