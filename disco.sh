@@ -13,6 +13,16 @@ while true; do
     read -p "Seleccione una opción: " opcion
 
     case $opcion in
+        1)
+            echo ""
+            free -h
+            read -p "Presione Enter para continuar..."
+            ;;
+        2)
+            echo ""
+            head -n 10 /proc/meminfo
+            read -p "Presione Enter para continuar..."
+            ;;
         3)
             read -p "Ingrese el directorio a listar: " dir
             if [ -d "$dir" ]; then
