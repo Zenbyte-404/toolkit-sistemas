@@ -1,7 +1,5 @@
 #!/bin/bash
-
 # disco.sh - Módulo de monitoreo del sistema de archivos
-
 while true; do
     clear
     echo "=========== ESTADO DEL DISCO ==========="
@@ -11,7 +9,6 @@ while true; do
     echo "0. Volver al menú principal"
     echo "========================================"
     read -p "Seleccione una opción: " opcion
-
     case $opcion in
         1)
             echo ""
