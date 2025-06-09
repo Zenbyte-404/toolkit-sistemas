@@ -1,7 +1,5 @@
 #!/bin/bash
-
 # memoria.sh - Módulo de monitoreo de memoria
-
 while true; do
     clear
     echo "========= MONITOREO DE MEMORIA ========="
@@ -11,7 +9,6 @@ while true; do
     echo "0. Volver al menú principal"
     echo "========================================"
     read -p "Seleccione una opción: " opcion
-
     case $opcion in
            1)
             echo ""
