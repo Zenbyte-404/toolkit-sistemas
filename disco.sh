@@ -12,12 +12,17 @@ while true; do
     case $opcion in
         1)
             echo ""
-            free -h
+            df -h
             read -p "Presione Enter para continuar..."
             ;;
         2)
             echo ""
-            head -n 10 /proc/meminfo
+            read -p "Ingrese ruta de archivo o directorio: " ruta
+            if [-e "$ruta"];then
+                du -sh "$ruta"
+            else 
+                echo "Ruta Invalida o inexistente"
+            fi
             read -p "Presione Enter para continuar..."
             ;;
         3)
